@@ -17,28 +17,36 @@
       color: whitesmoke;
     }
 
-    .my-footer {
+    .container {
       bottom: 1rem;
       position: fixed;
     }
 
-    .my-legend {
-      position: fixed;
-      bottom: 8rem;
+    @media (max-width: 900px){
+      .my-footer {
+        left:0rem !important;
+      }
+    }
+
+    @media (min-width: 901px){
+      .my-footer{
+        left: 20% !important;
+        color:blue !important;
+      }
     }
   </style>
   
 </head>
 <body>
-  <div class="container">
+  <div class="container my-footer">
     <div class="row">
-      <div class="col-md-4 col-xs-12 my-legend">
+      <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12">
         <p>I am a developer interested in Web Development technologies and Video Coding</p>
         <p>You can find my network here: <br /> <a href="https://github.com/andresf01" target="_new" ><img width="32px" height="32px" src="https://assets-cdn.github.com/images/modules/logos_page/Octocat.png" alt="Go to github page"></a> <a href="https://twitter.com/andresf01" target="_new" ><img height="32px" src="resources/images/Twitter_Social_Icon_Circle_Color.svg" alt="Go to github page"></a> </p>
       </div>
     </div>
     <div class="row align-items-end">
-      <div class="col-12 my-footer">
+      <div class="col-12 ">
         <h1 class="display-1">Andrés Martínez</h1>
       </div>
     </div>
