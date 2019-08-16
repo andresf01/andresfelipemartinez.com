@@ -45,18 +45,56 @@ body {
     position: relative;
 }
 
-
 .data-container {
     border-radius: 2rem;
     background: rgba(220, 220, 220, 0.5);
-}
-
-.data-container:nth-child(1) {
     padding: 2.5rem;
-    margin: 1rem 0;
+    margin: 5rem 0;
+    left: 50%;
+    position: fixed;
+    bottom: 0;
+    transform: translateX(-50%);
+    width: max-content;
 }
 
 .data-container > span {
     opacity: 1;
     color: white;
+}
+
+.header {
+    position: relative;
+}
+
+.cursor {
+    position: absolute;
+    animation: 0.8s linear 0s infinite alternate blinking, 1s linear forwards 2s moveX;
+    width: 2rem;
+    height: 1rem;
+    background-color: lightgray;
+    bottom: 0;
+}
+
+@keyframes blinking {
+    0% {
+        opacity: 0;
+    }
+    49% {
+        opacity: 0;
+    }
+    51% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes moveX {
+    from {
+        transform: translateX(2em)
+    }
+    to {
+        transform: translateX(2em)
+    }
 }
