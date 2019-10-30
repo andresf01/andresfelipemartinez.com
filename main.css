@@ -33,13 +33,73 @@ body {
     margin: 1rem;
 }
 
+hr {
+    opacity: 0.3;
+    margin: 1.25rem 1.5rem;
+}
+
+.sidebar {
+    height: 100vh;
+    width: 400px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    right: 0;
+    
+}
+
 .name {
     text-align: center;
     font-size: 5em;
     margin: 3rem 0;
+    line-height: 1;
 }
 
-.data {
+.skills__title {
+    text-align: center;
+}
+
+.skills__panel {
+    transform-style: preserve-3d;
+    position: relative;
+    transition: transform 0.5s ease;
+}
+
+.skills {
+    padding: 1rem;
+    display: grid;
+    grid-template: auto / repeat(3, 1fr);
+    /* transform: translateZ(200px); */
+}
+
+.skills > span {
+    text-align: center;
+    margin: 0.5rem;
+    transition: all 1s ease;
+}
+
+.skills > span:hover {
+    transform: scale(1.3);
+    cursor: default;
+}
+
+.conventions {
+    padding: 1rem;
+    display: grid;
+    grid-template: auto / repeat(3, 1fr);
+    /* transform-origin: left; */
+    transform: rotateY(-90deg);
+}
+
+.conventions > span {
+    text-align: center;
+    margin: 0.5rem;
+}
+
+.skills__panel.rotate {
+    transform: rotateY(90deg);
+}
+
+/* .data {
     max-width: 500px;
     align-content: center;
     position: relative;
@@ -60,7 +120,7 @@ body {
 .data-container > span {
     opacity: 1;
     color: white;
-}
+} */
 
 .header {
     position: relative;
