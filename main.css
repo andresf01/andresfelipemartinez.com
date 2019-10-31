@@ -27,13 +27,13 @@ body {
 }
 
 .bottom-right {
-    position: fixed;
+    position: absolute;
     bottom: 0;
     right: 0;
     margin: 1rem;
 }
 
-hr {
+hr.divider {
     opacity: 0.3;
     margin: 1.25rem 1.5rem;
 }
@@ -44,7 +44,7 @@ hr {
     background-color: rgba(0, 0, 0, 0.5);
     position: fixed;
     right: 0;
-    
+    transition: all 1s ease;
 }
 
 .name {
@@ -56,12 +56,6 @@ hr {
 
 .skills__title {
     text-align: center;
-}
-
-.skills__panel {
-    transform-style: preserve-3d;
-    position: relative;
-    transition: transform 0.5s ease;
 }
 
 .skills {
@@ -87,7 +81,7 @@ hr {
     display: grid;
     grid-template: auto / repeat(3, 1fr);
     /* transform-origin: left; */
-    transform: rotateY(-90deg);
+    /* transform: rotateY(-90deg); */
 }
 
 .conventions > span {
@@ -95,35 +89,30 @@ hr {
     margin: 0.5rem;
 }
 
-.skills__panel.rotate {
-    transform: rotateY(90deg);
+.low {
+    color: rgb(0, 192, 0);
 }
 
-/* .data {
-    max-width: 500px;
-    align-content: center;
-    position: relative;
+.medium {
+    color: rgba(255, 255, 0, 1);
 }
 
-.data-container {
-    border-radius: 2rem;
-    background: rgba(220, 220, 220, 0.5);
-    padding: 2.5rem;
-    margin: 5rem 0;
-    left: 50%;
-    position: fixed;
-    bottom: 0;
-    transform: translateX(-50%);
-    width: max-content;
+.high {
+    color: rgb(255, 35, 35);
 }
-
-.data-container > span {
-    opacity: 1;
-    color: white;
-} */
 
 .header {
     position: relative;
+}
+
+@media (max-width: 650px) {
+    .header {
+        padding: 0 5rem;
+    }
+
+    .sidebar {
+        width: 100%;
+    }
 }
 
 .cursor {
