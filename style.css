@@ -1,0 +1,125 @@
+:root {
+  --primary: rgb(230, 230, 230);
+  --secondary: rgb(136, 136, 136);
+  --terciary: rgb(100, 100, 100);
+}
+
+body {
+  font-family: "PT Sans", sans-serif;
+  padding: 1rem;
+  color: var(--primary);
+  margin: 0;
+  padding: 0;
+  background-color: rgb(0, 0, 0);
+}
+
+.container {
+  max-width: 640px;
+  margin: 0 auto;
+  margin-top: 20vh;
+  position: sticky;
+}
+
+@media (max-width: 740px) {
+  .container {
+    margin: 2rem;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+}
+
+.header > * {
+  margin: 0.5rem;
+}
+
+.header > img {
+  width: 6rem;
+  height: 6rem;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.header > .title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title a,
+.title a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+.title a:hover {
+  color: var(--terciary);
+}
+
+.bar {
+  display: grid;
+  grid: 1fr / repeat(3, 1fr);
+  flex-direction: row;
+  padding: 10px 20px;
+  border-radius: 10px;
+  background-color: rgb(39, 39, 39);
+}
+
+@media (max-width: 540px) {
+  .bar {
+    grid: auto / 1fr;
+  }
+}
+
+.bar > .item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  cursor: pointer;
+}
+
+.bar > .item:first-child {
+  margin-left: 0;
+}
+
+.bar > .item:last-child {
+  margin-right: 0;
+}
+
+.item img {
+  margin: 0.25rem 0.5rem;
+  width: 32px;
+  height: 32px;
+}
+
+.item > img:first-child {
+  margin-left: 0;
+}
+
+.text-lg {
+  font-size: 1.6rem;
+}
+
+.text-md {
+  font-size: 1.4rem;
+}
+
+.text-sm {
+  font-size: 1.2rem;
+}
+
+.secondary {
+  color: var(--secondary);
+}
+
+.content {
+  margin: 3rem 0;
+}
+
+.list {
+  display: grid;
+  grid: auto / repeat(3, 1fr);
+  margin: 0.75rem 0;
+}
