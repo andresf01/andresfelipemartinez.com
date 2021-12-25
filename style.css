@@ -73,18 +73,30 @@ body {
   }
 }
 
-.bar > .item {
+.bar a {
+  text-decoration: none;
+  color: inherit;
+  justify-self: center;
+}
+
+.bar .item {
   display: flex;
   flex-direction: row;
   align-items: center;
   cursor: pointer;
 }
 
-.bar > .item:first-child {
+@media (max-width: 540px) {
+  .bar a {
+    justify-self: auto;
+  }
+}
+
+.bar .item:first-child {
   margin-left: 0;
 }
 
-.bar > .item:last-child {
+.bar .item:last-child {
   margin-right: 0;
 }
 
